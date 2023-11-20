@@ -1,0 +1,174 @@
+body{
+  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0px;
+  background-color: rgb(21, 64, 130);
+}
+
+.wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background-color: #fff;
+}
+footer{
+  color:#f8f9fa;
+}
+
+#footer-txt{
+  padding-bottom: 15px;
+}
+.text-muted{
+  color: #6c757d;
+}
+.container{
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.sticky-top{
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+.navbar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
+}
+.navbar-nav{
+  flex-direction: row;
+  list-style: none;
+  display: flex;
+  padding-left: 0px;
+}
+.nav-link{
+  display: block;
+  padding: .5rem .5rem;
+}
+.nav-item{
+  color: rgba(0,0,0,.5);
+}
+
+.logo {
+  background-color: #fff;
+  padding: 8px;
+}
+.active{
+  color: rgba(0,0,0,.9);
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.col-md-6{
+  padding: 1px;
+}
+.col-xs-12{
+  padding: 1px;
+}
+
+.content  {
+  padding: 5px;
+  width: 95%;
+  text-align: justify;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  display: block;
+}
+li{
+  display: list-item;
+  padding-left: 0px;
+  color: rgba(0,0,0,.5);
+}
+
+li a {
+  float: right;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+table, tr, td{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  max-width: 95%;
+}
+
+.new-table{
+  width: 100%;
+}
+
+img{
+  max-width: 200px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+form{
+  padding-top: 20px;
+}
+h1, h2{
+  margin-bottom: .5rem;
+  margin-top: 0px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2rem;
+}
+*, ::before, ::after{
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  align-self: centre;
+}
+.left{
+  text-align: left;
+  padding: 15px;
+}
+.cent{
+  padding: 15px;
+}
+
+.right {
+  text-align: right;
+  padding: 15px;
+  display: inline-block;
+}
+
+.bann {
+  width: 100%;
+}
+
+
