@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+Example 1: write in text box, click submit, have alert with inputted text </br>
+<script>
+    function doSomething() {
+        let A = txt1.value
+        alert(A)
+    }
+</script>
+<input type="text" id="txt1">
+<input type="button" value="Submit" onclick="doSomething()">
+
+</br> </br> </br> </br>
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+Example 2: input numbers into 2 text boxes, submit, show result in 3rd box. Added 'missing number' error checks too </br> 
+<script>
+    function add() {
+        let A = num1.value
+        let B = num2.value
+        if (A=="") {
+            alert("First number is missing")
+            num1.focus()
+        } else {
+            if (B=="") {
+                alert("Second number is missing")
+                num2.focus()
+            } else {
+                let C = parseInt(A) + parseInt(B)
+                result.value = C
+            }
+        }
+    }
+</script>
+First number: <input type="text" id="num1"> </br>
+Second number: <input type="text" id="num2"> </br>
+<input type="button" value="Addition" onclick="add()"> </br>
+
+Result: <input type="text" id="result">
+
+</br> </br> </br> </br> 
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+Example 3:   </br> 
+<script>
+
+</script>
+
+
+</br> </br> </br> </br> 
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+
+</html>
