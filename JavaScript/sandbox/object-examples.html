@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <!-- -------------------------------------------------------------------------------------------------- -->
@@ -6,11 +5,11 @@
 Example 1: write in text box, click submit, have alert with inputted text </br>
 <script>
     function doSomething() {
-        let A = txt1.value
+        let A = example1id.value
         alert(A)
     }
 </script>
-<input type="text" id="txt1">
+<input type="text" id="example1id">
 <input type="button" value="Submit" onclick="doSomething()">
 
 </br> </br> </br> </br>
@@ -20,15 +19,15 @@ Example 1: write in text box, click submit, have alert with inputted text </br>
 Example 2: input numbers into 2 text boxes, submit, show result in 3rd box. Added 'missing number' error checks too </br> 
 <script>
     function add() {
-        let A = num1.value
-        let B = num2.value
+        let A = example2id1.value
+        let B = example2id2.value
         if (A=="") {
             alert("First number is missing")
-            num1.focus()
+            example2id1.focus()
         } else {
             if (B=="") {
                 alert("Second number is missing")
-                num2.focus()
+                example2id2.focus()
             } else {
                 let C = parseInt(A) + parseInt(B)
                 result.value = C
@@ -36,8 +35,8 @@ Example 2: input numbers into 2 text boxes, submit, show result in 3rd box. Adde
         }
     }
 </script>
-First number: <input type="text" id="num1"> </br>
-Second number: <input type="text" id="num2"> </br>
+First number: <input type="text" id="example2id1"> </br>
+Second number: <input type="text" id="example2id2"> </br>
 <input type="button" value="Addition" onclick="add()"> </br>
 
 Result: <input type="text" id="result">
@@ -46,11 +45,34 @@ Result: <input type="text" id="result">
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-Example 3:   </br> 
+Example 3: change css property onclick (click on the words 'red' and 'larger' below) </br> 
 <script>
-
+    function changeColour() {
+        example3id.style.color = "red"
+    }
+    let fs = 10
+    function increaseSize() {
+        fs += 10
+        example3id2.style.fontSize = fs
+    }
 </script>
+I am <span id="example3id" onclick="changeColour()">red</span> now. </br>
+I am <span id="example3id2" onclick="increaseSize()">larger</span> now.
 
+</br> </br> </br> </br> 
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+Example 4: transform y of text when mouse moves </br> 
+<script>
+    let top1 = 0
+    function moveDown() {
+        top1++
+        example4id.style.top=top1
+    }
+</script>
+<body onmousemove="moveDown()"></body>
+<span id="example4id" style="position:absolute">QA</span>
 
 </br> </br> </br> </br> 
 
