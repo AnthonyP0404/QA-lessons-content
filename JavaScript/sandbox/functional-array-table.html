@@ -1,0 +1,192 @@
+<html>
+     
+<script>
+    let employees = [
+        {
+            empno:      121,
+            name:       "Shafeeq",
+            salary:     4200,
+            department: "IT"
+        },
+        {
+            empno:      404,
+            name:       "Maxwell",
+            salary:     1200,
+            department: "Engineering"
+        },
+        {
+            empno:      678,
+            name:       "Rob",
+            salary:     400,
+            department: "Sales"
+        },
+        {
+            empno:      679,
+            name:       "Bob",
+            salary:     400,
+            department: "Sales"
+        }
+    ]
+
+    function showData(filter) {
+        let tableBody = document.getElementById("tableBody")
+        tableBody.innerHTML=""
+        for (let i = 0 ; i < employees.length ; i++) {
+            let tr = document.createElement("tr")
+                let td1 = document.createElement("td")  // serial number
+                let td2 = document.createElement("td")  // empno
+                let td3 = document.createElement("td")  // name
+                let td4 = document.createElement("td")  // salary
+                let td5 = document.createElement("td")  // tax
+                let td6 = document.createElement("td")  // net
+                let td7 = document.createElement("td")  // department
+                let td8 = document.createElement("input")  // delete button
+                let td9 = document.createElement("input")  // edit button
+
+            td1.innerHTML = i + 1
+            td2.innerHTML = employees[i].empno
+            td3.innerHTML = employees[i].name
+            td4.innerHTML = employees[i].salary
+            //work out tax then assign to td5
+            let salary = employees[i].salary
+            let tax = 0;
+            if (salary >= 1000 && salary < 2000)  tax = 0.15;
+            if (salary >= 2000)  tax = 0.21;
+            td5.innerHTML = tax*100 + "%"
+            //work out net and assign to td6
+            td6.innerHTML = salary - (salary*tax)
+            td7.innerHTML = employees[i].department
+            //delete row button
+            td8.type = "button"
+            td8.value = "Delete"
+            td8.style.padding = "10px"
+            td8.style.width = "50%" 
+            td8.onclick = function() { 
+                let choice = confirm("Do you want to delete this row?") 
+                if (choice) employees.splice(i,1); showData(document.getElementById("departmentFilter").value);
+            }
+            //edit row button
+            td9.type = "button"
+            td9.value = "Edit"
+            td9.style.padding = "10px"
+            td9.style.width = "50%" 
+            td9.onclick = function() {
+                if(td9.value == "Edit") {
+                    td9.value = "Save"
+                    editRow(td3, td5, td7, i)
+                } else {
+                    td9.value = "Edit"
+                    // functionality for saving what's currently in the text box ////////////////////////////////////////////////////////////////////
+                }
+            }
+
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            tr.appendChild(td4)
+            tr.appendChild(td5)
+            tr.appendChild(td6)
+            tr.appendChild(td7)
+            tr.appendChild(td8)
+            tr.appendChild(td9)
+
+            if ( filter == 'all' || filter == td7.innerHTML ) tableBody.appendChild(tr)
+        }
+    }
+
+    function newRecord() {
+        inputForm.style.visibility="visible"
+    }
+
+    function addEmployee() { 
+        //get info from form and add to array
+        let temp = 
+            { 
+                empno: document.getElementById("empnoTemp").value,
+                name: document.getElementById("nameTemp").value,
+                salary: document.getElementById("salaryTemp").value,
+                department: document.getElementById("departmentTemp").value
+            }
+        employees.push(temp)
+
+        //empty form and make it hidden
+        document.getElementById("empnoTemp").value = ""
+        document.getElementById("nameTemp").value = ""
+        document.getElementById("salaryTemp").value = ""
+        document.getElementById("departmentTemp").value = ""
+        inputForm.style.visibility="hidden"
+
+        //show table
+        showData('all')
+    }
+
+    //display all rows and reset filter
+    function showAllData() {
+        document.getElementById("departmentFilter").selectedIndex = 0;
+        showData('all')
+    }
+
+    //edit the row
+    function editRow(tdname, tdsalary, tddepartment, index) {
+        tdname.innerHTML = "<input value=" + employees[index].name + ">"
+        tdsalary.innerHTML = "<input value=" + employees[index].salary + ">"
+        tddepartment.innerHTML = "<input value=" + employees[index].department + ">"
+    }
+
+    
+</script>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<body onload="showData('all')">
+
+<input type="button" value="Add New Employee" onclick="newRecord()"> </br>
+
+<span id="inputForm" style="visibility:hidden;">
+    Employee Number: <input type="text" id="empnoTemp">
+    Name: <input type="text" id="nameTemp">
+    Salary: <input type="text" id="salaryTemp">
+    Department: <input type="text" id="departmentTemp">
+    <input type="button" value="Submit" onclick="addEmployee()">
+</span> </br>
+
+<input type="button" value="Show All Data" onclick="showAllData()"> </br><div><br></div>
+
+<select name="filter" value="Filter" id="departmentFilter">
+    <option value="-- Filter by Department --" onclick="showData('all')">-- Filter by Department --</option>
+    <option value="HR" onclick="showData('HR')">HR</option>
+    <option value="IT" onclick="showData('IT')">IT</option>
+    <option value="Engineering" onclick="showData('Engineering')">Engineering</option>
+    <option value="Sales" onclick="showData('Sales')">Sales</option>
+</select>   
+
+
+<style> 
+    table {
+        width: 100%; table-layout: fixed; 
+    }
+    th, td { 
+        border: solid black 1px; width: 12.5%; padding: 5px; text-align: center; overflow: hidden; white-space: nowrap;
+    } 
+</style>
+<table id="table" border="solid">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Employee #</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Tax</th>
+            <th>Net</th>
+            <th>Department</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

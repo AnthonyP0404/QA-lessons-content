@@ -135,59 +135,5 @@ Example 6: create button by clicking button </br>
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-Example 7: button adds data to existing table </br> 
-<script>
-let employees = [
-    {
-        empno:      121,
-        name:       "Shafeeq",
-        salary:     4200,
-        department: "IT"
-    },
-    {
-        empno:      404,
-        name:       "Maxwell",
-        salary:     4201,
-        department: "chairs"
-    }
-]
-
-function showData() {
-    let table1 = document.getElementById("example7table")
-    for (let i = 0 ; i < employees.length ; i++) {
-        let tr = document.createElement("tr")
-            let td1 = document.createElement("td")
-            let td2 = document.createElement("td")
-            let td3 = document.createElement("td")
-
-            td1.innerHTML = i + 1
-            td2.innerHTML = employees[i].empno
-            td3.innerHTML = employees[i].name
-
-            tr.appendChild(td1)
-            tr.appendChild(td2)
-            tr.appendChild(td3)
-
-        table1.appendChild(tr)
-    }
-}
-</script>
-
-<input type="button" value="Show Data" onclick="showData()">
-
-<style> th, td { border: solid black 1px; width: 200px; padding: 5px; text-align: center; } </style>
-<table id="example7table">
-<tr>
-    <th>#</th>
-    <th>Employee #</th>
-    <th>Name</th>
-</tr>
-</table>
-
-
-</br> </br> </br> </br> 
-
-<!-- -------------------------------------------------------------------------------------------------- -->
-
 
 </html>
