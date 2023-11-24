@@ -1,0 +1,33 @@
+<html>
+<script>
+    function doSomething(){
+       
+        for(let h = 0 ; h < document.forms.length ; h++) {
+            for(let i=0 ; i<document.forms[h].elements.length; i++){
+                if( document.forms[h].elements[i].value==""){
+                    document.forms[h].elements[i].value="*"
+                    document.forms[h].elements[i].style.border="solid red"
+                }
+                
+            }
+        }
+    }
+</script>
+ 
+<input type="Button" value="Check" onclick="doSomething()"><br>
+<br>
+<form>
+    <input>
+    <input> <br> <br>
+</form>
+ 
+   
+<form>
+<input>
+<input>
+<input>
+<input>
+<input> <br>
+ 
+</form>
+</html>
