@@ -11,6 +11,7 @@ import DisplayPostComments from './components/DisplayPostComments';
 import DisplayPostCommentsEfficiently from './components/DisplayPostCommentsEfficiently';
 import Effects from './components/Effects';
 import TrainerSubjects from './components/TrainerSubjects';
+import Training from './components/Training';
 
 function App() {
   return (
@@ -53,7 +54,9 @@ function App() {
 
       {/* <Effects /> */}
 
-      <TrainerSubjects />
+      {/* <TrainerSubjects /> */}
+
+      <Training />
 
     </>
   );

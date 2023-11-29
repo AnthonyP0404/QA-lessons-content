@@ -27,7 +27,8 @@ function TrainerSubjects() {
     let [subjectList,setSubjectList] = useState(subjects)
 
     useEffect( ()=> {
-        setSubjectList(subjects.filter((rec)=> rec.trainer==trainerName))
+        if (trainerName=="") setSubjectList(subjects)
+        else setSubjectList(subjects.filter((rec)=> rec.trainer==trainerName))
     },[trainerName] )
 
     function filterTrainers() {
@@ -39,15 +40,20 @@ function TrainerSubjects() {
     return(
         <>
         
-        <input id="trainerID"/>
-        <input type="button" value="Search" onClick={ () => filterTrainers() }/> <br/><br/>
+        <input id="trainerID" style={{margin:'5px'}}/>
+        <input type="button" value="Search" style={{margin:'5px'}} onClick={ () => filterTrainers() }></input> <br/><br/>
+            
+        <div style={{margin:'5px'}}>
+        Trainer: {trainerName} <br/>
+        Subjects: <br/>
+        </div>
         
-        <table>
+        <table style={{margin:'5px', border:'solid 1px black'}}>
             {
-                subjects.map( (sub) => 
+                subjectList.map( (sub) => 
                     <tr>
-                        <td>{subCount++}</td>
-                        <td>{sub.subject}</td>
+                        <td> {subCount++} </td>
+                        <td style={{width:'5px'}}> {sub.subject} </td>
                     </tr>
                 )
             }
