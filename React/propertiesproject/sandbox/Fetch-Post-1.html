@@ -1,0 +1,35 @@
+<html>
+<script>
+function saveData(){
+ 
+		let seller={
+			"firstName":document.getElementById("fname").value,
+			"surname":document.getElementById("sname").value,
+			"address":document.getElementById("addr").value,
+			"postcode":document.getElementById("pcode").value,
+			"phone":document.getElementById("phone").value
+		}
+ 
+		let ref=fetch("http://localhost:3000/seller",{
+			method:"POST",
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(seller)
+		})
+		ref.then((x)=> alert("PSOT request done"))
+
+ 
+}
+</script>
+ 
+First Name:<input type="text" id="fname"/> <br>
+Surname:<input type="text" id="sname"/> <br>
+Phone:<input type="text" id="phone"/> <br>
+Address:<input type="text" id="addr"/> <br>
+Postcode:<input type="text" id="pcode"/> <br>
+ 
+<input 
+	type="button"
+	id="btn1"
+	value="Save"
+	onclick="saveData()"/>
+</html>

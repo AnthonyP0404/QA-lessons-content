@@ -1,0 +1,23 @@
+<html>
+<script>
+function deleteData(){
+    
+    if(document.getElementById("textID").value=="") alert("Please enter the ID of a seller") 
+    else {
+        let url = "http://localhost:3000/seller/" + document.getElementById("textID").value
+        let ref=fetch(url,{ method:"Delete" })
+        ref.then((x)=> alert("Seller of id " + document.getElementById("textID").value + " has been deleted."))
+    }
+
+    // will then return to home page
+}
+</script>
+ 
+Enter ID of seller to delete: <input type="text" id="textID" />
+ 
+<input 
+	type="button"
+	id="btn1"
+	value="delete"
+	onclick="deleteData()" />
+</html>
