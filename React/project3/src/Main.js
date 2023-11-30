@@ -1,5 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import ShowSubjects from "./ShowSubjects.js";
+import ShowSubjects from "./components/ShowSubjects.js";
 
 
 function Main() {

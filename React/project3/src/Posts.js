@@ -1,6 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ShowPostComments from "./ShowPostComments";
+import ShowPostComments from "./components/ShowPostComments";
 
 function Posts() {
     let [posts,addPosts] = useState([])

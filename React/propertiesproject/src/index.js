@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
 import App from './App';
-import Main from './Main';
-import Posts from './Posts';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Main /> */}
-    {/* <Posts /> */}
+    <App />
   </React.StrictMode>
 );
 
