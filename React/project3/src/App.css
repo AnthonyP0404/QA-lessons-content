@@ -44,7 +44,19 @@ table {
 
 th, td {
   text-align: center;
-  width: 16%;
   border: solid 1px black;
   padding: 5px;
 }
+
+footer {
+  display:"block"; 
+  background-color: lightblue;
+  padding: 10px;
+}
+
+nav {
+  margin: 20px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
