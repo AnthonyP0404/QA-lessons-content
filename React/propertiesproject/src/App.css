@@ -46,3 +46,47 @@
     transform: rotate(360deg);
   }
 } */
+
+
+/* MAIN SELLERS PAGE ----------------------*/
+#sellersPage{
+  margin: 20px;
+}
+
+#sellersPage span {
+  margin: 50px;
+  border: solid 1px black;
+  background-color: grey;
+  color: black;
+}
+
+
+/* VIEW ALL SELLERS PAGE ------------------*/
+#allSellers {
+  width: 90%;
+  border: solid 2px black;
+  margin: 10px;
+  align-items: center;
+}
+
+#allSellers th {
+  width: 16%;
+  border: solid 2px black;
+  text-align: center;
+}
+#allSellers td {
+  width: 16%;
+  border: solid 1px black;
+}
+#allSellers input {
+  width: 100%;
+}
+
+
+/* ADD SELLER -----------------------------*/
+#addSellerForm {
+  width: 100%;
+  border: dashed 1px black;
+  padding: 20px;
+  margin: 10px;
+}

@@ -78,17 +78,12 @@
       "id": 14
     },
     {
-      "firstName": "asd",
-      "surname": "asd",
-      "id": 15
-    },
-    {
-      "firstName": "asd",
-      "surname": "asd",
-      "address": "asd",
-      "postcode": "ads",
-      "phone": "asd",
-      "id": 16
+      "firstName": "qwe",
+      "surname": "qwe",
+      "address": "qwe",
+      "postcode": "qwerty",
+      "phone": "qwe",
+      "id": 23
     }
   ],
   "property": [
