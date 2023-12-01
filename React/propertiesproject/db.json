@@ -78,12 +78,20 @@
       "id": 14
     },
     {
-      "firstName": "qwe",
-      "surname": "qwe",
-      "address": "qwe",
-      "postcode": "qwerty",
-      "phone": "qwe",
-      "id": 23
+      "firstName": "test",
+      "surname": "test",
+      "address": "test",
+      "postcode": "test",
+      "phone": "test",
+      "id": 24
+    },
+    {
+      "firstName": "123",
+      "surname": "123",
+      "address": "123",
+      "postcode": "123",
+      "phone": "123",
+      "id": 25
     }
   ],
   "property": [

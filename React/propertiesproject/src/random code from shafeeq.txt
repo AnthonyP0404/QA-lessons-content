@@ -1,0 +1,108 @@
+﻿
+
+import {useReducer} from "react" let initialState={
+}
+name: "shafeeq",
+salary:1000
+function myreducer (state1, action1){
+// will redute new state on the bases on action switch (parseInt(action1.type)){
+case 1: return "Andy"; case 2: return "Shafeeq"; case 3: return "JAmes";
+case 4: return "Peter"; default:
+return ""
+}
+}
+function UseReducer3(){
+//useReduce(function, initialvalue)
+let [Trainer, dispatch1]=useReducer (myreducer, "Shafeeq") return(
+<br/> <br/>
+Trainer: {Trainer}
+<br></br>
+<button onClick={() => dispatch1({type: '1'})}> Jave </button> <br/> <button onClick={() => dispatch1({type:'2'})}> C Sharp </button> <br/> <button onClick={() => dispatch1({type: '3'})}> HTML </button> <br/> <button onClick={() => dispatch1({type: '4'})}> SQL </button> <br/> </>
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+import {useReducer} from "react"
+ 
+ 
+let initialState={
+    name:"shafeeq",
+    salary:1000
+}
+ 
+function  myreducer(state1,action1){
+    // will redute new state on the bases on action
+    if(action1.type==="+"){
+       
+        return state1*2
+    }
+    if(action1.type==="-"){
+        return state1-1
+    }
+}
+ 
+function UseReducer1(){
+    //useReduce(function,initialvalue)
+    let [count,dispatch1]=useReducer(myreducer,2000)
+ 
+   
+    return(
+        <>
+        +++++++++++++++++++++++++++++++++++++++++++++
+        <br/>
+     
+        <button onClick={ ()=> dispatch1({type:'+'})}> Increment </button> <br/>
+        {count} <br></br>
+        <button onClick={ ()=> dispatch1({type:'-'})}> Decrement </button> <br/>
+       
+        </>
+    )
+}
+ 
+export default UseReducer1
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+import {useRef} from "react"
+ 
+ 
+function UseRef1(){
+ 
+    let inputRef=useRef(null)
+ 
+    function dosomeThing(){
+        let id=inputRef.current.value
+        inputRef.current.value= inputRef.current.value + "*"
+        inputRef.current.focus()
+        inputRef.current.style.color="red"
+       
+    }
+    return (
+        <>
+ 
+        Enter Value:<input
+                type="text"
+                ref={inputRef}
+                />
+        <input type="Button" value="Click it "
+                onClick={()=>dosomeThing()}/>
+ 
+ 
+ 
+        </>
+    )
+ 
+}
+ 
+export default UseRef1;
+
+
+
+

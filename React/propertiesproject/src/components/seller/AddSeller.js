@@ -35,17 +35,18 @@ function AddSeller() {
     return(
         <>
             <div id="addSellerForm"> 
-            <span> First Name: <input type="text" id="fname"/> </span> <br/>
-            <span> Surname:    <input type="text" id="sname"/> </span> <br/><br/>
-            <span> Phone:      <input type="text" id="phone"/> </span> <br/><br/>
-            <span> Address:    <input type="text" id="addr" /> </span> <br/>
-            <span> Postcode:   <input type="text" id="pcode"/> </span> <br/><br/>
+                <h2> Enter Seller Information </h2> <br/>
+                <span> First Name: <input type="text" id="fname"/> </span> 
+                <span> Surname: <input type="text" id="sname"/> </span> <br/><br/>
+                <span> Phone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="phone"/> </span> <br/><br/>
+                <span> Address: &nbsp;&nbsp;&nbsp; <input type="text" id="addr" /> </span> 
+                <span> Postcode: <input type="text" id="pcode"/> </span> <br/><br/>
  
-            <input type="button" id="btn1" value="Add" onClick={()=> saveData()}/>
+                <input type="button" id="addButton" value="Add" onClick={()=> saveData()}/>
 
             </div> 
             
-            <br/><br/><br/>
+            <br/>
 
             <ViewAllSellers/>
         </>

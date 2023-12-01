@@ -47,36 +47,50 @@
   }
 } */
 
+h1 {
+  padding: 20px;
+}
+
 
 /* MAIN SELLERS PAGE ----------------------*/
 #sellersPage{
-  margin: 20px;
+  margin: 10px;
 }
 
 #sellersPage span {
-  margin: 50px;
+  margin: 10px;
   border: solid 1px black;
   background-color: grey;
+  color: black;
+  padding: 10px;
+}
+
+.mainLinks {
   color: black;
 }
 
 
-/* VIEW ALL SELLERS PAGE ------------------*/
+/* VIEW ALL SELLERS TABLE ------------------*/
 #allSellers {
-  width: 90%;
+  width: 95%;
   border: solid 2px black;
   margin: 10px;
   align-items: center;
+  table-layout: fixed;
 }
 
 #allSellers th {
   width: 16%;
   border: solid 2px black;
   text-align: center;
+  padding: 3px;
 }
 #allSellers td {
   width: 16%;
   border: solid 1px black;
+  word-wrap: break-word;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #allSellers input {
   width: 100%;
@@ -89,4 +103,8 @@
   border: dashed 1px black;
   padding: 20px;
   margin: 10px;
+}
+
+#addButton {
+  margin-left: 20px;
 }

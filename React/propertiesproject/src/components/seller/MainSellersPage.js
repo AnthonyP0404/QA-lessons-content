@@ -1,5 +1,4 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import { useState } from "react"
 
 import ViewAllSellers     from "./ViewAllSellers";
 import ViewSpecificSeller from "./ViewSpecificSeller";
@@ -25,12 +24,12 @@ function SellersPage() {
             <input type="button" value="View specific seller" onClick={<Link to={"./specificSeller"}/>}/> 
             <input type="button" value="Add seller"         onClick={<Link to={"./addSeller"}/>}     />   */}
 
-            <span><Link to={"./allSellers"}    > View all sellers     </Link> </span> 
-            <span><Link to={"./specificSeller"}> View specific seller </Link> </span> 
-            <span><Link to={"./addSeller"}     > Add seller           </Link> </span> <br/><br/>
+            <span><Link className="mainLinks" to={"./allSellers"}    > View all sellers     </Link> </span> 
+            <span><Link className="mainLinks" to={"./specificSeller"}> View specific seller </Link> </span> 
+            <span><Link className="mainLinks" to={"./addSeller"}     > Add seller           </Link> </span> <br/><br/><br/>
 
             <Routes>
-                <Route path="/"               element={<SellersPage/>} />
+                {/* <Route path="/"               element={<SellersPage/>} /> */}
                 <Route path="/allSellers"     element={<ViewAllSellers/>} />
                 <Route path="/specificSeller" element={<ViewSpecificSeller/>} />
                 <Route path="/addSeller"      element={<AddSeller/>} />

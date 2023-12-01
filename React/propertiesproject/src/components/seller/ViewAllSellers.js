@@ -27,7 +27,8 @@ function ViewAllSellers() {
         let url = "http://localhost:8081/seller/" + sellerID
         let ref=fetch(url,{ method:"Delete" })
         ref.then((x)=> alert("Seller of id " + sellerID + " has been deleted."))
-        navigate("/sellersHome")    }
+        navigate("/")    
+    }
 
     return(
         <>

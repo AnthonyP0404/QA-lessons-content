@@ -15,13 +15,13 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item ">
-                <a className="nav-link p-2" href="#">
-                  <Link to={"/sellersPage"}> <b>Sellers</b> </Link>
+                <a className="nav-link p-2" href="http://localhost:3000/sellers">
+                  <b>Sellers</b> 
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link p-2" href="#">
-                  <Link to={"/buyersPage"}> <b>Buyers</b> </Link>
+                  <b>Buyers</b>
                 </a>
               </li>
             </ul>
