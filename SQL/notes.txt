@@ -1,0 +1,49 @@
+
+(login info was here)
+
+----------------------------------------------------------------------------------------------------
+
+
+- Summarised Notes
+
+I SHOULD ALWAYS SAY WHICH DATABASE I AM USING
+
+
+------This is the specific order:
+
+USE (db_name)
+GO
+
+SELECT 	    (col_name) , (col_name2)
+	can do 'SELECT TOP 10' to get the first 10 results
+		with ties show those with same result as last one so can make list longer ('distinct' and 'with ties' are opposite)
+FROM 	    (table_name)
+WHERE	    (condition)
+GROUP BY    (fields eg. col_name)
+	anything not in an aggregate function should go here
+HAVING	    (group-level filter)
+	similar to WHERE but can have aggregate functions
+ORDER BY    (fields eg. col_name or col_number) 
+	ascending by default 'asc'. 'desc' to go descending
+	can order by expressions
+------
+
+
+Aggregate functions : count(r) --counts values in row r, count(*) --counts rows, min(), max(), avg(), sum()
+
+
+logical operators : AND OR NOT		(AND takes precedence over OR so does ANDs first - just bracket em)
+special operators : IN BETWEEN LIKE
+	IN 	- replacement for multipls OR's
+	BETWEEN - specifies a range
+	LIKE	- similar to == but needed for partial string comparisons (using % and _)
+	% 	- can be put infront/behind text to ignore what's infront/behind it
+
+Possible returns: TRUE FALSE NULL
+<> instead of !=
+'IS NULL'  instead of  '= NULL'
+Aggregate - when many things become one
+
+
+Primary keys  - reference point for other tables
+Foreign keys  - referal to another table
