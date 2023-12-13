@@ -1,3 +1,6 @@
+all practical work done in the vm in the vm 
+
+
 - Summarised Notes
 
 I SHOULD ALWAYS SAY WHICH DATABASE I AM USING
@@ -108,3 +111,53 @@ store procedure:
 	exec dbo.'name'		- runs it
 	
 
+TVF - table value functions
+	inline
+	multiline
+
+Derived tables aka inline-view
+	not stored in db 
+	allow for more modular queries
+	must have alias and unique names for columns
+	basically putting a view in FROM(here)
+	this is to get around needing the privileges to create views
+	can put in where if using an aggregate function as it needs 1 value
+		correlated subquery ting
+
+CTE - common table expressions
+	WITH cte_name AS (query), cte_name2 AS (query2), etc
+		, is important for creating several CTEs
+	good as it doesnt create objects (ie. views/functions) so doesnt store it
+	also avoids needing rights for views
+	doesnt need to be in the regular order, can be out the way eg after the whole select statement
+
+temporary tables
+	# - singular - local - only works on set session/tab
+	## - double - global - wont close until all who use it stop their session
+	eg. 'create table #name' or 'insert into ##averages'
+
+table variables
+	declare @name TABLE (
+		column definitions
+	)
+	even more local than temporary tables	
+		local to the batch instead of the session
+	
+
+APPLY
+	cross - does for every row
+	probably wont use
+
+
+windowing
+	replaces group by?
+	clauses
+	OVER 
+	PARTITION BY
+	BETWEEN n PRECEDING AND CURRENT ROW
+	rank() dense_rank() row_number() ntile() convert()
+	order by	
+		lead			- gets next row
+		lag 			- gets previous row
+		first_value 	- ye
+		last_value		- explains itself
