@@ -229,3 +229,28 @@ errors
 	raiseerror
 		put in catch
 			basically the error message 
+
+
+
+transactions
+	begin - start transaction
+	then either commit - enforce changes
+	or rollback - undo changes
+
+	can combine with try & catch, ex:
+		begin try
+			begin tran 
+				<some data modifications>
+			commit tran
+		end try
+		begin catch
+			rollback tran
+			<code for the error>
+		end catch
+
+
+	read commit
+	read uncommit
+	repeatable read
+	serializable
+	snapshot
