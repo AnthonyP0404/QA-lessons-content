@@ -85,6 +85,28 @@ functions
 	insert
 	update 'table' set 'stuff' where 'this is that'
 	delete - make sure it has a WHERE or it deletes all the rows
+	
+	example: 
+	create function getDelegateID(@CourseName1 varchar(200), @CourseName2 varchar(200))
+		returns @a table(DelegateID varchar(100))
+		as
+		begin
+			insert into @a 
+				select DelegateID
+				from DelegateAttendance as da
+				join CourseRun as cr on da.CourseRunID = cr.CourseRunID
+				join Course as c on c.CourseID = cr.CourseID
+				where CourseName = @CourseName1
+				intersect
+				select DelegateID
+				from DelegateAttendance as da
+				join CourseRun as cr on da.CourseRunID = cr.CourseRunID
+				join Course as c on c.CourseID = cr.CourseID
+				where CourseName = @CourseName2
+			return
+		end
+	go
+	-- select * from getDelegateID('QATSQL', 'QATSQLPLUS')
 		
 
 
@@ -156,8 +178,54 @@ windowing
 	PARTITION BY
 	BETWEEN n PRECEDING AND CURRENT ROW
 	rank() dense_rank() row_number() ntile() convert()
-	order by	
+	positional - needs to be in 'order by'
 		lead			- gets next row
 		lag 			- gets previous row
 		first_value 	- ye
 		last_value		- explains itself
+
+pivot
+	used for cross-tabulation
+		making rows columns with aggregation
+
+group by
+	with rollup
+		NULL becomes a wildcard showing grand total
+	with cube
+		does the above plus also showing total of other matching fields
+
+grouping sets		- makes sense
+grouping_id			- doesn't
+
+
+
+batches				- statements for parsing, optimisation & execution. ended by go.
+variables			- stored but cannot go across batches - dropped at end. declare @name datatype
+if / else			- can only have 1 lump each, but begin...end counts as 1 lump
+begin / end			- ^
+while				- hear me out.. it's a loop
+dynammic sql		- sql injection hacking stuff
+cursors				- declare open fetch close deallocate
+return				- done-zo
+
+
+errors
+	syntax
+	runtime
+	statement level
+	stored in sys.messages
+		errorid severity message
+		exec sp_addmessage < the above > 	creates and stores new one
+
+	try / catch
+		begin try
+			code 
+		end try
+		begin catch
+			code
+		end catch
+		code
+	
+	raiseerror
+		put in catch
+			basically the error message 
