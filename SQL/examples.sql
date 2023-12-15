@@ -34,6 +34,21 @@ go
 
 
 
+--						inline view
+/*
+select company.name, salesperson.fname+' '+salesperson.lname as 'Employee Name', sale.order_value
+from sale
+inner join company 
+	on sale.company_no = company.company_no
+inner join salesperson 
+	on sale.emp_no = salesperson.emp_no
+inner join (select company_no, max(order_value) as MAXVALUE from sale group by company_no) as wotsit
+	on sale.order_value = wotsit.MAXVALUE  and  sale.company_no = wotsit.company_no
+order by company.company_no
+*/
+
+
+
 --                      CTE
 /*
 with cte_BourneCourses as (
@@ -140,7 +155,7 @@ select vendorname, coursename, startdate, sum(numberdelegates) as totaldelegates
 from VendorCourseDateDelegateCount
 group by grouping sets (
     (vendorname),
-    (vendorname,coursename),
+    (vendorname, coursename),
     (vendorname, coursename, startdate)
 )
 */
@@ -155,4 +170,37 @@ SELECT * FROM sys.messages
 
 DECLARE @msg VARCHAR(100) = FORMATMESSAGE(50200, 2345, 'Fred Jones')
     -- %d = 2345,  %s = 'Fred Jones'
+*/
+
+
+
+-- 					transaction
+/*
+declare @accountno int = 12343422
+declare @machine in = 23321
+declare @amount money = 50.00
+
+begin try
+	begin tran
+		insert into dbo.cashpointtrans(acctno,trandt,machineid,tranvalue)
+			values (@accountno, getdate(),@machine,@amount)
+		update dbo.currentaccount
+			set balance = balance - @amount
+			where acctno = @accountno
+	commit tran
+end try
+begin catch
+	print 'error was caught';
+	throw
+end catch
+*/
+
+
+--					show all pairs of people from same county
+/*
+select sp1.county, sp1.fname+' '+sp1.lname as Bod1, sp2.fname+' '+sp2.lname as Bod2
+from salesperson as sp1
+inner join salesperson as sp2 
+	on sp1.county = sp2.county
+where sp1.emp_no < sp2.emp_no
 */
