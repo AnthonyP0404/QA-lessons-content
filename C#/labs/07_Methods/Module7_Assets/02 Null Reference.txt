@@ -1,0 +1,13 @@
+        [Fact]
+        public void Null_Reference()
+        {
+            // Generate new reference type Car
+            Car? c = null;
+
+            // started = c.Start(); // Generate method, remove 'throw new NotImplementedException();', return true
+
+            // Put in a not-null test, so that the car is only started if there is a car
+
+            Assert.False(started);
+        }
+
