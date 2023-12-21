@@ -1,0 +1,18 @@
+        // This test focuses on partial classes
+        // Partial classes enable some class code to be automatically
+        // generated without overwriting the developer-written code
+
+        // Create a folder named FromDatabase in your MethodsLibrary project
+        // In the folder, create a partial class Car with the same namespace as the Car at the project level
+        // Make the Car at the project level also a partial class
+        // Move the Make property to the 'FromDatabase' Car and add a string property called RegNumber
+        // The following should then compile and the test should pass
+
+
+        [Fact]
+        public void Partial_Classes()
+        {
+            Car c = new Car() { Make = Ford, RegNumber = "ABC 123" };
+            Assert.Equal(Ford, c.Make);
+            Assert.Equal("ABC 123", c.RegNumber);
+        }

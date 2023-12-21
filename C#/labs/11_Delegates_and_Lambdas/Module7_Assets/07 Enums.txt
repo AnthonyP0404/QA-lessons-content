@@ -1,0 +1,10 @@
+ [Fact]
+        public void Enums()
+        {
+            // Create an enum 'Make' with the values Ford and BMW
+            // Create a property in Car of type Make called Make
+            // import the enum into this test file
+            // so that you do not have to edit the code below
+            Car c = new Car() { Make = Ford };
+            Assert.Equal(Ford, c.Make);
+        }

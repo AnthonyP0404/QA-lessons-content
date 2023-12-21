@@ -1,0 +1,14 @@
+        [Fact]
+        public void Null_Reference_Resolve_By_Elvis()
+        {
+
+            Car? c = null;
+
+            // started = c.Start();
+
+            // Put in a not-null test using the Elvis operator, so that the car is only started if there is a car
+            
+
+
+            Assert.Null(started); // Null assertion
+        }
