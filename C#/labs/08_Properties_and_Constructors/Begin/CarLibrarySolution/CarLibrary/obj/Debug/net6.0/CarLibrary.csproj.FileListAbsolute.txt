@@ -1,0 +1,12 @@
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\bin\Debug\net6.0\CarLibrary.deps.json
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\bin\Debug\net6.0\CarLibrary.dll
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\bin\Debug\net6.0\CarLibrary.pdb
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.AssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.sourcelink.json
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.dll
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\refint\CarLibrary.dll
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\CarLibrary.pdb
+C:\Users\User\OneDrive\Documents\QA-lessons-content\C#\code\Labs\08_Properties_and_Constructors\Begin\CarLibrarySolution\CarLibrary\obj\Debug\net6.0\ref\CarLibrary.dll
