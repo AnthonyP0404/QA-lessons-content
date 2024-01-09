@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.NET",
+    "\\.NET\\labs",
+    "\\.NET\\labs\\Lab04",
+    "\\.NET\\labs\\Lab04\\QuickTour"
   ],
-  "SelectedNode": "\\C:\\Users\\User\\OneDrive\\Documents\\Github_Repo",
   "PreviewInSolutionExplorer": false
 }
