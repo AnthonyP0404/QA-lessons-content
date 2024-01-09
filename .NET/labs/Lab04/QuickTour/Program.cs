@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using QuickTour.Configuration;
 using QuickTour.Data;
+using QuickTour.Middleware;
+using QuickTour.Models;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +26,21 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+//lab 04 stuff
+builder.Services.AddTransient<ITransient, TransientDependency>();
+builder.Services.AddScoped<IScoped, ScopedDependency>();
+builder.Services.AddSingleton<ISingleton, SingletonDependency>();
+
+builder.Services.AddScoped<IForumContext, MockForumContext>();
+
+builder.Services.AddTransient<IActionInjection,ActionInjectionDependency>();
+
+builder.Services.Configure<FeaturesConfiguration>(builder.Configuration.GetSection("Features"));
+
+//
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +56,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+
+//lab 4 stuff
+app.UseMiddleware<CustomMiddleware1>();
+app.UseMiddleware<CustomMiddleware2>();
+
+//
 
 app.MapControllerRoute(
     name: "default",
