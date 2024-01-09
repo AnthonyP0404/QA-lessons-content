@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFRefresh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11f9c560b4255914e82446f7c10559c15e536a81")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFRefresh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFRefresh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

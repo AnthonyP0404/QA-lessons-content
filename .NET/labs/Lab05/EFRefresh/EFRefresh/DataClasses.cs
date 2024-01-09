@@ -6,15 +6,18 @@ namespace EFRefresh
 {
     public class Zoo
     {
-        // TODO 4 public int ZooId { get; set; }
+        // TODO 4 [DONE]
+        public int ZooId { get; set; }
         public string Name { get; set; }
-        public ICollection<Animal> Animals { get; set; } = new List<Animal>();
+        public virtual ICollection<Animal> Animals { get; set; } = new List<Animal>();
     }
     public class Animal
     {
-        // TODO 4 public int AnimalId { get; set; }
+        // TODO 4 [DONE]
+        public int AnimalId { get; set; }
         public string Type { get; set; }
         public string Name { get; set; }
+        //public double Weight { get; set; }
         public virtual Zoo Zoo { get;set;}
     }
 
