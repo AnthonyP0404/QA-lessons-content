@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Welcome to the Forums!</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.NumberOfThreads)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.ForumId  }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ForumId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ForumId })
             </td>
         </tr>
 }
