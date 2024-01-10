@@ -1,0 +1,6 @@
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.AssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\SeedDatabase\obj\Debug\net7.0\SeedDatabase.sourcelink.json

@@ -1,0 +1,10 @@
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.AssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.RazorAssemblyInfo.cache
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.RazorAssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\Github_Repo\.NET\labs\Lab06\QAForum\QAForum\obj\Debug\net7.0\QAForum.sourcelink.json
