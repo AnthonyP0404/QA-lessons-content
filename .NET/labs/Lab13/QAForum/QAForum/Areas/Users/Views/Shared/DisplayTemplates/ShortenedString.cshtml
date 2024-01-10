@@ -1,0 +1,13 @@
+﻿@model string
+@{ 
+    const int maxLength = 30;
+
+    if (Model.Length <= maxLength)
+    {
+        @Model
+    }
+    else
+    {
+        @(Model.Substring(0, maxLength) + "...")
+    }
+}

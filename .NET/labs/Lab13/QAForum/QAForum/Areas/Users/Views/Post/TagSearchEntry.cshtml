@@ -1,0 +1,38 @@
+﻿@model QAForum.Areas.Users.ViewModels.TagSearchViewModel
+
+@{
+    ViewData["Title"] = "TagSearchEntry";
+}
+
+<h1>Tag Search</h1>
+
+<h4>TagSearchViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TagToSearch" class="control-label"></label>
+                <input asp-for="TagToSearch" class="form-control" />
+                <span asp-validation-for="TagToSearch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary"
+                        onclick="location.href = '/Tagged/' +
+                            document.getElementById('TagToSearch').value">
+                    Submit
+                </button>
+
+            </div>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
