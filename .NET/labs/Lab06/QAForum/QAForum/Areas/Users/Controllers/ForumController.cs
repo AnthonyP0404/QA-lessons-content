@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QAForum.Areas.Users.ViewModels;
 using QAForum.EF;
+using QAForum.Models;
 
 namespace QAForum.Areas.Users.Controllers
 {
@@ -22,7 +23,8 @@ namespace QAForum.Areas.Users.Controllers
         // GET: ForumController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var forum = context.Forums.Single(f => f.ForumId == id);
+            return View(ForumViewModel.FromForum(forum));
         }
 
         // GET: ForumController/Create
@@ -34,36 +36,50 @@ namespace QAForum.Areas.Users.Controllers
         // POST: ForumController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ForumWriteViewModel viewModel)
         {
             try
             {
+                // TODO: Add insert logic here
+                Forum forum = new Forum
+                {
+                    Title = viewModel.Title
+                };
+                context.Forums.Add(forum);
+                context.SaveChanges();
+
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                ViewBag.ErrorText = e.GetBaseException().Message;
+                return View(viewModel);
             }
         }
 
         // GET: ForumController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var forum = context.Forums.Single(f => f.ForumId == id);
+            return View(ForumWriteViewModel.FromForum(forum));
         }
 
         // POST: ForumController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, ForumWriteViewModel viewModel)
         {
             try
             {
+                var forum = context.Forums.Single(f => f.ForumId == id);
+                forum.Title = viewModel.Title;
+                context.SaveChanges();
+
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(viewModel);
             }
         }
 

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QAForum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb53186f3e85bff2648b00b30c38b87657ee2f1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2d84bd87f1bbc45f7cec698b9956023e5f5c278")]
 [assembly: System.Reflection.AssemblyProductAttribute("QAForum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QAForum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

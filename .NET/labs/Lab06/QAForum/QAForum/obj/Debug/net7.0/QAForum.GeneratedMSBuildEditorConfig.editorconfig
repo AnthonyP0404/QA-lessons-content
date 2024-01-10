@@ -22,6 +22,18 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/OneDrive/Documents/Github_Repo/.NET/labs/Lab06/QAForum/QAForum/Areas/Users/Views/Forum/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcRm9ydW1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/OneDrive/Documents/Github_Repo/.NET/labs/Lab06/QAForum/QAForum/Areas/Users/Views/Forum/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcRm9ydW1cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/OneDrive/Documents/Github_Repo/.NET/labs/Lab06/QAForum/QAForum/Areas/Users/Views/Forum/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcRm9ydW1cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/OneDrive/Documents/Github_Repo/.NET/labs/Lab06/QAForum/QAForum/Areas/Users/Views/Forum/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcRm9ydW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
