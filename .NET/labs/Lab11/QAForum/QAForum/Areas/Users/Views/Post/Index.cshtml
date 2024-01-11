@@ -1,0 +1,12 @@
+﻿@model IEnumerable<QAForum.Areas.Users.ViewModels.PostViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@addTagHelper *, QAForum
+<vc:post-list thread-id="null"></vc:post-list>
