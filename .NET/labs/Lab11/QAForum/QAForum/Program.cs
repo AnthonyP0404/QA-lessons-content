@@ -26,6 +26,7 @@ builder.Services.AddSingleton<CompanyDetails>(new CompanyDetails
 
 
 var app = builder.Build();
+app.UseStatusCodePagesWithReExecute("/Home/Status", "?code={0}");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

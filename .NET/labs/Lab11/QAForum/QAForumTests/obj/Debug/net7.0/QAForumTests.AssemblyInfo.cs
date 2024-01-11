@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QAForumTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+377f7a2c6935083857aa3d26fc55adefd4a3ee9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("QAForumTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QAForumTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -19,6 +19,7 @@ namespace QAForum.EF
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Models.Thread> Threads { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<UnhandledException> UnhandledExceptions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

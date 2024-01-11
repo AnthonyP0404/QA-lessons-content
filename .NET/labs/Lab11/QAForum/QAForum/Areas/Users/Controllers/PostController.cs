@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QAForum.Areas.Users.ViewModels;
 using QAForum.EF;
+using QAForum.Filters;
 using QAForum.Models;
 
 namespace QAForum.Areas.Users.Controllers
@@ -20,8 +21,9 @@ namespace QAForum.Areas.Users.Controllers
             this.context = context;
         }
 
+        [TypeFilter(typeof(CustomErrorAttribute),Arguments = new object[] { "PostError" })]
         public IActionResult Index()
-        {
+        { 
             return View();
         }
 
